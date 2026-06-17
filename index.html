@@ -26,17 +26,20 @@
 </style>
 </head><body>
 <a class="skip-link" href="#main-content">Direkt zum Inhalt springen</a>
-<header><h1>Satz SOL-Schulsozialarbeit Niedersachsen</h1><p><strong>Band 3, Modul 4: Schwierige Gespräche, Eskalation und Gesprächsabbruch</strong><br>Ein interaktiver Lernpfad für Studium, Anerkennungspraktikum und Berufseinstieg. Fokus: deeskalierende Gesprächsführung, professionelle Grenzsetzung, Gesprächsabbruch, Dokumentation und Schutzlogik im schulischen Kontext Niedersachsens.</p>
+<header><h1>SOL-Schulsozialarbeit Niedersachsen</h1><p><strong>Band 3, Modul 4: Schwierige Gespräche, Eskalation und Gesprächsabbruch</strong><br>Ein interaktiver Lernpfad für Studium, Anerkennungspraktikum und Berufseinstieg. Fokus: deeskalierende Gesprächsführung, professionelle Grenzsetzung, Gesprächsabbruch, Dokumentation und Schutzlogik im schulischen Kontext Niedersachsens.</p>
 <div class="header-form" aria-label="Teilnehmendendaten und Ergebnisübermittlung">
 <label class="header-field" for="userName">Name<input type="text" id="userName" placeholder="Name oder Kürzel" autocomplete="name"></label>
 <label class="header-field" for="userEmail">E-Mail<input type="email" id="userEmail" placeholder="name@example.de" autocomplete="email"></label>
+<label class="header-consent"><input type="checkbox" id="privacyConfirm" onchange="saveCheckbox('privacyConfirm')"> Keine identifizierenden Falldaten</label>
+<label class="header-consent"><input type="checkbox" id="sendConsent" onchange="saveCheckbox('sendConsent')"> Online-Übermittlung zustimmen</label>
+<button type="button" class="header-save-btn" onclick="save()">Zwischenspeichern</button>
 <button class="header-send" onclick="sendData()">Absenden</button>
 </div>
 <div class="header-status" id="headerStatus" aria-live="polite"></div></header>
 <div class="topbar"><button onclick="toggleNav()">Navigation ein/aus</button><button class="secondary" onclick="goPrev()">Zurück</button><button class="secondary" onclick="goNext()">Weiter</button><div class="progressWrap"><div class="progressText" id="progressText">Fortschritt: 0 von 12 Abschnitten</div><div class="progressBar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-labelledby="progressText"><div id="progressFill" class="progressFill"></div></div></div></div>
 <div id="layout" class="layout"><nav id="sideNav" aria-label="Modulnavigation"><h2>Moduleinheiten</h2><div id="navList"></div><div class="hint">Gesperrte Abschnitte werden nach Bearbeitung des vorherigen Abschnitts freigegeben. Der Fortschritt wird lokal im Browser gespeichert.</div></nav><main id="main-content" role="main">
 <section id="section1" data-section="1"><div class="sectionHead"><div><span class="badge">Abschnitt 1</span><h2>Start und Ziel des Moduls</h2></div><span class="badge">Theorie</span></div>
-<p><strong>Satz SOL-Schulsozialarbeit Niedersachsen</strong></p>
+<p><strong>SOL-Schulsozialarbeit Niedersachsen</strong></p>
 <p><strong>Band 3, Modul 4: Schwierige Gespräche, Eskalation und Gesprächsabbruch</strong></p>
 <p>Dieses Modul trainiert schwierige Gesprächssituationen in der Schulsozialarbeit: Widerstand, Druck, Vorwürfe, Drohungen, Eskalation, Gesprächsabbruch und professionelle Nachbereitung. Der Schwerpunkt liegt auf dem schulischen Kontext Niedersachsens.</p>
 <div class="meta-grid" aria-label="Modulsteckbrief">
@@ -156,8 +159,8 @@
 
 <div class="notfallkarte"><h3>Notfallkarte: Schwieriges Gespräch</h3><ol><li><strong>Innerlich stoppen:</strong> Tempo senken, atmen, nicht in Gegenangriff gehen.</li><li><strong>Benennen:</strong> „Ich merke, dass es gerade sehr angespannt ist.“</li><li><strong>Grenze setzen:</strong> „So kann ich das Gespräch nicht fortsetzen.“</li><li><strong>Sicherheit prüfen:</strong> Raum, Tür, Abstand, Kolleg:in, Schulleitung, Telefon.</li><li><strong>Entscheiden:</strong> fortsetzen, unterbrechen oder beenden.</li><li><strong>Dokumentieren:</strong> Anlass, Wortlaut, Verlauf, Grenze, informierte Personen, nächster Schritt.</li></ol><p class="hint">Diese Karte ist als Druckelement gedacht und ersetzt keine schulischen Verfahrenswege bei akuter Gefahr.</p></div>
 <div id="certificate" class="certificate hidden"><h2>Abschlussnachweis</h2><p>Der Lernpfad <strong>Band 3, Modul 4: Schwierige Gespräche, Eskalation und Gesprächsabbruch</strong> wurde erfolgreich bearbeitet.</p><label>Name:<input id="certName" type="text" placeholder="Name eintragen"></label><p id="certDate"></p><button onclick="window.print()">Drucken / als PDF speichern</button></div>
-<div class="actions"><button onclick="exportData()">Bearbeitungsstand exportieren</button><div class="form-group"><label><input type="checkbox" id="privacyConfirm"> Keine identifizierenden Falldaten</label></div>
-<div class="form-group"><label><input type="checkbox" id="sendConsent"> Online-Übermittlung zustimmen</label></div>
+<div class="actions"><button onclick="exportData()">Bearbeitungsstand exportieren</button>
+
 <button onclick="sendData()">An Google Sheets senden</button><button onclick="resetProgress()" class="danger">Fortschritt zurücksetzen</button></div>
 <div class="protocolBox formprint"><h3>Druckbares Abbruch- und Sicherheitsprotokoll</h3><div class="grid two"><label>Datum / Uhrzeit<textarea></textarea></label><label>Beteiligte und Rollen<textarea></textarea></label><label>Anlass<textarea></textarea></label><label>kritische Aussagen / Drohungen im Wortlaut<textarea></textarea></label><label>eigene Intervention / gesetzte Grenze<textarea></textarea></label><label>Abbruchgrund<textarea></textarea></label><label>informierte Personen<textarea></textarea></label><label>offene Risiken / nächster Schritt<textarea></textarea></label></div></div>
 <div id="sendFeedback" class="feedback"></div>
@@ -171,6 +174,7 @@ let completed = JSON.parse(localStorage.getItem('b3m4_completed') || '[]');
 let checked = JSON.parse(localStorage.getItem('b3m4_checked') || '{}');
 let quizPassed = localStorage.getItem('b3m4_quizPassed') === 'true';
 
+function saveCheckbox(id){const el=document.getElementById(id);if(el)localStorage.setItem('sol_cb_'+id,el.checked?'1':'0');}
 function save(){localStorage.setItem('b3m4_current', current);localStorage.setItem('b3m4_completed', JSON.stringify(completed));localStorage.setItem('b3m4_checked', JSON.stringify(checked));localStorage.setItem('b3m4_quizPassed', quizPassed ? 'true':'false'); collectInputs().forEach(([id,val])=>localStorage.setItem('b3m4_'+id,val));}
 function collectInputs(){return Array.from(document.querySelectorAll('textarea,input,select')).filter(el=>el.id).map(el=>[el.id,el.value]);}
 function getUserName(){return (document.getElementById('userName')?.value || '').trim();}
